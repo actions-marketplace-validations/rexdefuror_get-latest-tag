@@ -52,7 +52,6 @@ const main = async () => {
         repo: repo
     });
 
-
     let foundTags = [];
     for (const tag of tags.data) {
         const tagName = tag.name;
