@@ -1,0 +1,37 @@
+name: "Get latest tag"
+author: "rexdefuror"
+description: "GitHub Action gets a latest tag and sets an environment variable if it finds it."
+branding:
+  icon: "tag"
+  color: "green"
+
+inputs:
+  owner:
+    description: "Owner of the repository."
+    required: false
+    default: ${{ github.repository_owner }}
+  repo:
+    description: "Repository name."
+    required: false
+    default: ${{ github.repository }}
+  token:
+    description: "GitHub token."
+    required: false
+    default: ${{ github.token }}
+  prefix:
+    description: "Prefix of the tag."
+    required: false
+  suffix:
+    description: "Suffix of the tag."
+    required: false
+  releaseOnly:
+    description: "Get only release tags."
+    required: false
+    default: "false"
+  regex:
+    description: "Regex to match the tag."
+    required: false
+
+runs:
+  using: "node16"
+  main: "dist/index.js"
