@@ -1,4 +1,4 @@
-name: "Get latest tag"
+name: "Get Latest Tag Action"
 author: "rexdefuror"
 description: "GitHub Action gets a latest tag and sets an environment variable if it finds it."
 branding:
