@@ -17,4 +17,8 @@ jobs:
         with:
           node-version: 18
       - uses: ./
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          owner: 'rexdefuror'
+          repo: 'get-latest-tag'
       - run: 'echo "Latest tag: ${{ env.LATEST_TAG }}"'
